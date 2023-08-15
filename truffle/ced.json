@@ -1,0 +1,18 @@
+{
+  "projectId": "blockchain-contracts",
+  "defaultEnvironment": "development",
+  "subsystemId": "solidity-contracts",
+  "build": {
+    "steps": [
+      {
+        "name": "Install",
+        "command": "npm install"
+      },
+      {
+        "name": "Build",
+        "command": "npm run compile"
+      }
+    ],
+    "artifact": "./build"
+  }
+}
