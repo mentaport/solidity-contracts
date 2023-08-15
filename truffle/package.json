@@ -18,9 +18,19 @@
     "mentaport"
   ],
   "author": "Mentaport <developers@mentaport.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mentaport/solidity-contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mentaport/solidity-contracts/issues"
+  },
+  "homepage": "https://github.com/mentaport/solidity-contracts",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.8.2",
-    "truffle-plugin-verify": "^0.6.5"
+    "truffle-plugin-verify": "^0.6.5",
+    "solhint":"^3.6.1"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.1.1",
@@ -29,7 +39,7 @@
     "truffle-contract-size": "^2.0.1"
   },
   "scripts": {
-    "lint:sol": "node_modules/.bin/solium -d contracts/",
+    "lint:sol": "solhint 'contracts/**/*.sol'",
     "test": "truffle tests",
     "compile":"truffle compile"
   }

@@ -2,25 +2,27 @@
 pragma solidity 0.8.17;
 /**                                            
        
-             ___           ___           ___                         ___           ___         ___           ___                   
-     /\  \         /\__\         /\  \                       /\  \         /\  \       /\  \         /\  \                  
-    |::\  \       /:/ _/_        \:\  \         ___         /::\  \       /::\  \     /::\  \       /::\  \         ___     
-    |:|:\  \     /:/ /\__\        \:\  \       /\__\       /:/\:\  \     /:/\:\__\   /:/\:\  \     /:/\:\__\       /\__\    
-  __|:|\:\  \   /:/ /:/ _/_   _____\:\  \     /:/  /      /:/ /::\  \   /:/ /:/  /  /:/  \:\  \   /:/ /:/  /      /:/  /    
- /::::|_\:\__\ /:/_/:/ /\__\ /::::::::\__\   /:/__/      /:/_/:/\:\__\ /:/_/:/  /  /:/__/ \:\__\ /:/_/:/__/___   /:/__/     
- \:\~~\  \/__/ \:\/:/ /:/  / \:\~~\~~\/__/  /::\  \      \:\/:/  \/__/ \:\/:/  /   \:\  \ /:/  / \:\/:::::/  /  /::\  \     
-  \:\  \        \::/_/:/  /   \:\  \       /:/\:\  \      \::/__/       \::/__/     \:\  /:/  /   \::/~~/~~~~  /:/\:\  \    
-   \:\  \        \:\/:/  /     \:\  \      \/__\:\  \      \:\  \        \:\  \      \:\/:/  /     \:\~~\      \/__\:\  \   
-    \:\__\        \::/  /       \:\__\          \:\__\      \:\__\        \:\__\      \::/  /       \:\__\          \:\__\  
-     \/__/         \/__/         \/__/           \/__/       \/__/         \/__/       \/__/         \/__/           \/__/  
+      ___           ___           ___                     ___           ___         ___           ___                   
+     /\  \         /\__\         /\  \                   /\  \         /\  \       /\  \         /\  \                  
+    |::\  \       /:/ _/_        \:\  \         ___     /::\  \       /::\  \     /::\  \       /::\  \         ___     
+    |:|:\  \     /:/ /\__\        \:\  \       /\__\   /:/\:\  \     /:/\:\__\   /:/\:\  \     /:/\:\__\       /\__\    
+  __|:|\:\  \   /:/ /:/ _/_   _____\:\  \     /:/  /  /:/ /::\  \   /:/ /:/  /  /:/  \:\  \   /:/ /:/  /      /:/  /    
+ /::::|_\:\__\ /:/_/:/ /\__\ /::::::::\__\ /:/__/ /: /_/:/\:\__\ /:/_/:/  /  /:/__/ \:\__\ /:/_/:/__/___   /:/__/     
+ \:\~~\  \/__/ \:\/:/ /:/  / \:\~~\~~\/__//::\  \    \:\/:/  \/__/ \:\/:/  /   \:\  \ /:/  / \:\/:::::/  /  /::\  \     
+  \:\  \        \::/_/:/  /   \:\  \     /:/\:\  \    \::/__/       \::/__/     \:\  /:/  /   \::/~~/~~~~  /:/\:\  \    
+   \:\  \        \:\/:/  /     \:\  \    \/__\:\  \    \:\  \        \:\  \      \:\/:/  /     \:\~~\      \/__\:\  \   
+    \:\__\        \::/  /       \:\__\        \:\__\    \:\__\        \:\__\      \::/  /       \:\__\          \:\__\  
+     \/__/         \/__/         \/__/         \/__/     \/__/         \/__/       \/__/         \/__/           \/__/
        
-                                           
+                                      
 **/
 interface IMentaportERC721 {
   /**
   * @dev Emitted when `mentaport` updates its account
   */
-  event MentaportAccount(address indexed sender, address indexed account);
+  event MentaportAccount(
+    address indexed sender,
+    address indexed account);
   /**
   * @dev Emitted when mint_role `sender` reveals contract URI.
   */
@@ -40,7 +42,10 @@ interface IMentaportERC721 {
   /**
   * @dev Emitted when `admin`  mints `mintAmount` of tokens for `receiver` account
   */
-  event MintForAddress(address indexed admin, uint256 mintAmount, address indexed receiver);
+  event MintForAddress(
+    address indexed admin,
+    uint256 mintAmount, 
+    address indexed receiver);
   /**
   * @dev Emitted when `admin` updates a rule
   */
@@ -48,8 +53,10 @@ interface IMentaportERC721 {
   /**
   * @dev Emitted when `admin` updates a `state`
   */
-  event StateUpdate(address indexed admin, uint256 state, string message);
-
+  event StateUpdate(
+    address indexed admin,
+    uint256 state, 
+    string message);
  /**
   * @dev Emitted when mint NFT with location
   */
