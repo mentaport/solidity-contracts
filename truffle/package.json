@@ -1,4 +1,4 @@
-{ 
+{
   "name": "@mentaport/solidity-contracts",
   "description": "Mentaport smart contracts for Solidity",
   "version": "0.0.1",
@@ -7,7 +7,7 @@
     "/contracts/main/*.sol",
     "/contracts/supplements/*.sol",
     "/build/contracts/*.json"
-    ], 
+  ],
   "keywords": [
     "solidity",
     "ethereum",
@@ -29,8 +29,10 @@
   "homepage": "https://github.com/mentaport/solidity-contracts",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.8.2",
-    "truffle-plugin-verify": "^0.6.5",
-    "solhint":"^3.6.1"
+    "solhint": "^3.6.1",
+    "solhint-plugin-prettier": "^0.0.5",
+    "truffle": "^5.11.2",
+    "truffle-plugin-verify": "^0.6.5"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.1.1",
@@ -40,7 +42,8 @@
   },
   "scripts": {
     "lint:sol": "solhint 'contracts/**/*.sol'",
+    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol",
     "test": "truffle tests",
-    "compile":"truffle compile"
+    "compile": "truffle compile"
   }
 }
