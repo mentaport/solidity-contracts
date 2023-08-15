@@ -1,0 +1,36 @@
+{ 
+  "name": "@mentaport/solidity-contracts",
+  "description": "Mentaport smart contracts for Solidity",
+  "version": "0.0.1",
+  "files": [
+    "/contracts/interfaces/*.sol",
+    "/contracts/main/*.sol",
+    "/contracts/supplements/*.sol",
+    "/build/contracts/*.json"
+    ], 
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "EVM",
+    "smart",
+    "contracts",
+    "security",
+    "mentaport"
+  ],
+  "author": "Mentaport <developers@mentaport.com>",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.8.2",
+    "truffle-plugin-verify": "^0.6.5"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.1",
+    "dotenv": "^16.0.3",
+    "truffle-assertions": "^0.9.2",
+    "truffle-contract-size": "^2.0.1"
+  },
+  "scripts": {
+    "lint:sol": "node_modules/.bin/solium -d contracts/",
+    "test": "truffle tests",
+    "compile":"truffle compile"
+  }
+}
