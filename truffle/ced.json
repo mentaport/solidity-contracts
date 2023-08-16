@@ -11,8 +11,12 @@
       {
         "name": "Build",
         "command": "npm run compile"
+      },
+      {
+        "name": "Prepare",
+        "command": "mv publish_package.json package.json"
       }
     ],
-    "artifact": "./build"
+    "artifact": "."
   }
 }
