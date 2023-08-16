@@ -1,7 +1,7 @@
 {
   "name": "@mentaport/solidity-contracts",
   "description": "Mentaport smart contracts for Solidity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "/contracts/interfaces/*.sol",
     "/contracts/main/*.sol",

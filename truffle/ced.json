@@ -2,6 +2,7 @@
   "projectId": "blockchain-contracts",
   "defaultEnvironment": "development",
   "subsystemId": "solidity-contracts",
+  "version":"0.0.2",
   "build": {
     "steps": [
       {

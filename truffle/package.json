@@ -1,7 +1,7 @@
 {
   "name": "@mentaport/solidity-contracts",
   "description": "Mentaport smart contracts for Solidity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "/contracts/interfaces/*.sol",
     "/contracts/main/*.sol",
@@ -44,6 +44,7 @@
     "lint:sol": "solhint 'contracts/**/*.sol'",
     "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol",
     "test": "truffle tests",
-    "compile": "truffle compile"
+    "compile": "truffle compile",
+    "version:control":""
   }
 }
