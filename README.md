@@ -16,6 +16,11 @@ and proofs verification.
 
 `/supplements`: This folder contain useful contracts that extend the core ideas of the core contracts
 
+### Installation 
+```shell
+npm install @mentaport/solidity-contracts
+```
+
 ### Setup
 Our contracts were built using the truffle framework. You'd need to setup truffle on your machine to set
 up the contracts on your machine. Check out how to setup truffle 
