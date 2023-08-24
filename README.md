@@ -29,12 +29,12 @@ test the contracts:
 
 cd into the truffle directory:
 ```shell
-cd mentaport-nft-examples\{example_folder}
+cd truffle
 ```
 
 install contract dependencies
 ```shell
-yarn install
+npm install
 ```
 
 test the contracts
