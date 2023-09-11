@@ -71,7 +71,7 @@ module.exports = {
       skipDryRun: true
 		},
     goerli: {
-      provider: () => new HDWalletProvider(privateKey, `https://eth-goerli.g.alchemy.com/v2/V2e78EGe8p9WP3QhZzeSe5jPiIwGehYX`),
+      provider: () => new HDWalletProvider(privateKey, `https://eth-goerli.g.alchemy.com/v2/${anchemy_api_key_test}`),
       network_id: '5',
       confirmations: 2,
       //gasPrice: 470000000000,
@@ -79,7 +79,7 @@ module.exports = {
       skipDryRun: true
     },
     mainnet: {
-      provider: () => new HDWalletProvider(mainnet_private_key, `https://eth-mainnet.g.alchemy.com/v2/RzKGbV9V_icoelwD_I09BhaQV3EIzm4w`),
+      provider: () => new HDWalletProvider(mainnet_private_key, `https://eth-mainnet.g.alchemy.com/v2${anchemy_api_key_main}`),
       network_id: '1',
       confirmations: 1,
       timeoutBlocks: 200,
