@@ -1,10 +1,23 @@
-.DS_Store
+cache/
+out/
 .vscode/
-contracts/.placeholder
-build/
-test/.placeholder
+reports
+# directories
+artifacts
+broadcast
+cache
+coverage
+docs
 node_modules
+out
+out-optimized
+out-svg
 
-**/.env
-**/.secret
-**/config/*
+# files
+*.env
+*.log
+.DS_Store
+.pnp.*
+lcov.info
+package-lock.json
+yarn.lock

@@ -1,48 +1,48 @@
-# Mentaport Solidity Contracts
+# <h1 align="center"> Mentaport Contracts </h1> <h6 align="center"> [![Github Actions][gha-badge]][gha] [![Foundry][foundry-badge]][foundry] </h6>
 
-This repository contains Mentaport's solidity smart contracts. The contracts are separated into the
-following folders:
+[gha]: https://github.com/mentaport/mentaport-core-contracts/actions
+[gha-badge]: https://github.com/mentaport/mentaport-core-contracts/actions/workflows/ci.yml/badge.svg
+[foundry]: https://getfoundry.sh
+[foundry-badge]: https://img.shields.io/badge/Built%20with-Foundry-FFDB1C.svg
 
-`/interfaces`: This folder contain interfaces which are useful for integrating with Mentaport's 
-contracts.
-
-`/main`: This folder contains the 3 core contracts that power Mentaport's location-aware features.
-- `MentaportERC721`: Our bare metal contract that contains internal functions for minting NFTs.
-- `MentaportMint`: Extends the `MentaportERC721` contract and adds the ability for minting with location rules.
-    - We have designed our main mint contract to have dynamic tokenURI, meaning that you will pass a unique tokenURI at minting.
-    - If you want more traditional minting, check the supplement minting contract.
-- `MentaportVerify`: Our access control contract that manages access to all our contracts.
-  It is also responsible for signatures and proofs verification.
-- `/supplements`: This folder contain useful contracts that extend the core ideas of the main contracts for simpler tokenURI management. 
+This repository contains the core smart contracts of the Mentaport Certificate Platform. In-depth documentation is available at
+[docs.mentaport.com](https://docs.mentaport.com/).
 
 
-[Examples of live Contracts](https://github.com/mentaport/mentaport-nft-examples)
+## Getting Started
+Before you begin, make sure you have the following tools and dependencies installed:
 
----
-### Installation 
-You can add our contracts to your project by simply installing the library:
+* [Node.js](https://nodejs.org/en) (>=16.x)
+* [npm](https://www.npmjs.com/) (Node Package Manager)
+* [Solc](https://docs.soliditylang.org/en/latest/installing-solidity.html#npm-node-js) and [Solc-select](https://github.com/crytic/solc-select)
+* [Foundry](https://github.com/foundry-rs/foundry) (Install globally with npm install -g foundry)
+
+1. Install forge dependencies
 ```shell
-npm install @mentaport/solidity-contracts
+forge install
 ```
----
-### Run Tests
-Our contracts were built using the truffle framework. If you want to run our tests, you will need to setup truffle on your machine to set
-up the contracts on your machine. Check out how to setup truffle 
-[here](https://trufflesuite.com/docs/truffle/how-to/install/). Follow these stops to setup and
-test the contracts:
-
-cd into the truffle directory:
+2. Install yarn/npm dependencies
 ```shell
-cd truffle
+yarn/npm install
 ```
-
-install contract dependencies
+3. Build contracts
 ```shell
-npm install
+make build
 ```
-
-test the contracts
+4. Run tests on contracts
 ```shell
-truffle test
+make test
+```
+5. Run trace on contracts
+```shell
+make trace
+```
+6. Install [slither](https://github.com/crytic/slither#how-to-install)
+```shell
+pip3 install slither-analyzer
+```
+7. Run static analysis on contracts
+```shell
+yarn run slither:analyze
 ```
 
