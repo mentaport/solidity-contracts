@@ -5,7 +5,7 @@
 [foundry]: https://getfoundry.sh
 [foundry-badge]: https://img.shields.io/badge/Built%20with-Foundry-FFDB1C.svg
 
-This repository contains the core smart contracts of the Mentaport Protocol. In-depth documentation is available at
+This repository contains the core smart contracts of the Mentaport Certificate Platform. In-depth documentation is available at
 [docs.mentaport.com](https://docs.mentaport.com/).
 
 
